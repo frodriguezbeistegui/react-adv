@@ -1,4 +1,4 @@
-import { ProductCard } from '../ components/ProductCard';
+import ProductCardHOC, { ProductButtons, ProductTitle, ProductCard, ProductImg  } from '../ components';
 
 type Props = {}
 
@@ -18,7 +18,17 @@ const ShoppingPage = (props: Props) => {
         flexDirection: 'row',
         flexWrap: 'wrap',
       }}>
-      <ProductCard product={product}/>
+      <ProductCardHOC product={product}>
+          <ProductCardHOC.Image />     
+          <ProductCardHOC.Title title={'Cafe'} />
+          <ProductCardHOC.Buttons />
+      </ProductCardHOC>
+
+      <ProductCard product={product}>
+        <ProductImg />
+        <ProductTitle />
+        <ProductButtons />
+      </ProductCard>
 
       </div>
     </div>
