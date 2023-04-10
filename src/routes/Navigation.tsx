@@ -4,6 +4,7 @@ import {
   Route,
   NavLink
 } from 'react-router-dom';
+import React from 'react'
 
 import logo from '../logo.svg';
 import ShoppingPage from '../02-component-patterns/pages/ShoppingPage';

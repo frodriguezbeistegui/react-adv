@@ -1,5 +1,6 @@
+import React from 'react'
 import ProductCardHOC, { ProductButtons, ProductTitle, ProductCard, ProductImg  } from '../ components';
-
+import '../styles/custom-styles.css'
 type Props = {}
 
 const product = {
@@ -24,10 +25,10 @@ const ShoppingPage = (props: Props) => {
           <ProductCardHOC.Buttons />
       </ProductCardHOC>
 
-      <ProductCard product={product}>
-        <ProductImg />
-        <ProductTitle />
-        <ProductButtons />
+      <ProductCard product={product} className="bg-dark" >
+        <ProductImg className='custom-image'/>
+        <ProductTitle className='text-white text-bold' />
+        <ProductButtons className='custom-buttons' />
       </ProductCard>
 
       </div>
